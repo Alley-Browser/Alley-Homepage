@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#bgcolorpicker {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 300px;
+    z-index: 999; /* Set a higher z-index to make it appear above other elements */
+}
+
+#bgColorInput {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px; /* Adjusted margin-top to make space for the color picker */
+}
+
+
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass morphism effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for the glass effect */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-btn {
+    background-color: rgba(97, 203, 26);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    backdrop-filter: blur(10px); /* Glass morphism effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for the glass effect */
+}
+
+/* Show accordion content when button is active */
+.accordion-btn.active {
+    background-color: #45a049;
+}
+.accordion-btn.active + .accordion-content {
+    display: block;
+}
